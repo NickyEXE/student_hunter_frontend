@@ -1,22 +1,13 @@
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import React, {Component} from 'react'
 
 
 export class MapContainer extends Component {
 
-    state={
-        lat: 40.700862,
-        lng: -73.987472
-    }
-
-    componentDidMount(){
-        setInterval(()=>this.setState({lat: this.state.lat +.0005}), 1000)
-    }
 
     render() {       
     return (
     <React.Fragment>
-    <h1>You are the hunter! Hunt your friend!</h1>
         <Map
             style={{width: '100%', height: '50vh', position: 'relative'}}
             google={this.props.google}
@@ -25,7 +16,6 @@ export class MapContainer extends Component {
             center={this.props.center}
             
             zoom={16}
-        //   onClick={this.onMapClicked}
         >
         <Marker
             title={'The marker`s title will appear as a tooltip.'}
@@ -38,5 +28,5 @@ export class MapContainer extends Component {
 }
  
 export default GoogleApiWrapper({
-  apiKey: "GOES HERE"
+  apiKey: process.env.REACT_APP_NOT_SECRET_CODE
 })(MapContainer)

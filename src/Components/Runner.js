@@ -39,6 +39,7 @@ export default class Runner extends Component {
 
     render(){
         return(
+            // <div>Test</div>
             <MapContainer center={this.state.center}/>
         )
     }
