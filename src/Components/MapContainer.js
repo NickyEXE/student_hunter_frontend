@@ -11,10 +11,8 @@ export class MapContainer extends Component {
         <Map
             style={{width: '100%', height: '50vh', position: 'relative'}}
             google={this.props.google}
-        //   style={style}
             initialCenter={this.props.center}
             center={this.props.center}
-            
             zoom={16}
         >
         <Marker
