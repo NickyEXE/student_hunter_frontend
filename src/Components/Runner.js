@@ -40,7 +40,11 @@ export default class Runner extends Component {
     render(){
         return(
             // <div>Test</div>
+            <React.Fragment>
+            
             <MapContainer center={this.state.center}/>
+            
+            </React.Fragment>
         )
     }
 
