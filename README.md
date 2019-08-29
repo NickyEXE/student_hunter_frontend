@@ -1,13 +1,32 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Overview of Lecture
+
+This lecture is designed to show students basic tools that can be used to develop mobile-first web pages. This code relies on a different github repo for its backend.
+
+##SWBATs
+-Develop in preview mode in the Chrome Dev Tools
+-Understand the various tools for determining and conditionally rendering for mobile
+-Connect their mobile devices using the dev tools and access their console
+-Set a cookie on their website manually using the console.
+-Use ngrok to access development ports without plugging in
+-Track a fellow student who has their webpage open to "localhost:3000/" with a cookie "friend" using Google Maps
+
+
+##Lecture Structure (Spoilers for Students)
+
+This app, when completed (it will have a completed "master" branch and a "lesson" branch with incomplete code to build out), will allow all students on the '/hunter' path to follow a student who has previously left the building on the 'runner' path using an ngrok url. 
+
+Given that they're on development server, the lecturer will be able to send both parties messages simply by updating the code and saving.
+
+To do this, the lecturer will have to provide the runner student with a device with to-sleep power saver features turned off and with a cookie stored on the page that's simply the string "friend".
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [https://da1ca9cb.ngrok.io](https://da1ca9cb.ngrok.io) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.

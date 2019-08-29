@@ -16,7 +16,7 @@ export default class Hunter extends Component {
     }
 
     smellBlood = () => {
-        fetch("http://localhost:3000/last")
+        fetch("https://da1ca9cb.ngrok.io/last")
         .then(res => res.json())
         .then(res => this.setState({center: {lat: res.lat, lng: res.lng}}))
     }
