@@ -7,20 +7,20 @@ export class MapContainer extends Component {
 
     render() {       
     return (
-    <React.Fragment>
+    <div>
         <Map
-            style={{width: '100%', height: '50vh', position: 'relative'}}
+            style={{width: '100%', height: '100%', position: 'relative'}}
             google={this.props.google}
             initialCenter={this.props.center}
             center={this.props.center}
             zoom={16}
         >
-        <Marker
-            title={'The marker`s title will appear as a tooltip.'}
-            name={'SOMA'}
-            position={this.props.center} />
+          <Marker
+              title={'The marker`s title will appear as a tooltip.'}
+              name={'SOMA'}
+              position={this.props.center} />
         </Map>
-        </React.Fragment>
+      </div>
     );
   }
 }

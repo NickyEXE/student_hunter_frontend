@@ -3,19 +3,17 @@ import React from 'react';
 import './App.css';
 import Runner from './Components/Runner.js';
 import Hunter from './Components/Hunter.js';
-import Timer from './Components/Timer.js';
 import { Route, Switch } from "react-router-dom";
 
 function App() {
   
   return (
-    <React.Fragment>
-      <Timer/>
+    <div className="full-app">
       <Switch>
         <Route exact path="/" component={Runner} />
         <Route path="/hunter" component={Hunter} />
       </Switch>
-    </React.Fragment>
+    </div>
   );
 }
 

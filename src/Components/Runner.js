@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import MapContainer from './MapContainer.js';
+import Timer from './Timer.js'
 
 export default class Runner extends Component {
 
@@ -37,12 +38,12 @@ export default class Runner extends Component {
       };
 
     render(){
-        console.log(this.state)
         return(
-            // <div>Test</div>
-            <React.Fragment>
             
-            <MapContainer center={this.state.center}/>
+            <React.Fragment>
+            <div className="message">Test.</div>
+            <Timer/>            
+            <div className="mapDiv"><MapContainer center={this.state.center}/></div>
             
             </React.Fragment>
         )

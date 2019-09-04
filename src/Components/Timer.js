@@ -7,7 +7,7 @@ export default class Timer extends Component {
         seconds: 0
     }
 
-    countDownDate = new Date("Aug 28, 2019 13:56:00").getTime();
+    countDownDate = new Date("Sep 4, 2019 18:45:00").getTime();
     getMinutesAndSeconds = () => { 
         const now = new Date().getTime();
         const distance = this.countDownDate - now;
@@ -22,9 +22,11 @@ export default class Timer extends Component {
     }
 
     render(){
+        const secondsString = String(this.state.seconds)
+        const seconds = secondsString.length === 1 ? "0" + secondsString : secondsString
         return(
             <div className={"timer"}>
-                {this.state.minutes}: {this.state.seconds}
+                {this.state.minutes}:{seconds} remaining.
             </div>
         )
     }

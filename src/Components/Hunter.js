@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import MapContainer from './MapContainer.js';
+import Timer from './Timer.js'
 
 export default class Hunter extends Component {
 
@@ -24,8 +25,10 @@ export default class Hunter extends Component {
     render(){
         return(
             <React.Fragment>
-                <h1 className={"Message"}>Find your friend! Tag, don't tackle. (and be back in ten minutes)</h1>
-                <MapContainer center={this.state.center}/>
+                {/* <div className="heading">Welcome hunter!</div> */}
+                <div className="message">Find your friend! Tag, don't tackle. (and be back in ten minutes)</div>
+                <Timer/>
+                <div className="mapDiv"><MapContainer center={this.state.center}/></div>
             </React.Fragment>
         )
     }

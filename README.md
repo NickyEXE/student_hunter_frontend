@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Overview of Lecture
 
 This lecture is designed to show students basic tools that can be used to develop mobile-first web pages. This code relies on a [different github repo](https://github.com/NickyEXE/student_hunter_backend) for its backend.
