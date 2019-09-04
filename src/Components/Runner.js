@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import MapContainer from './MapContainer.js';
+import Timer from './Timer.js'
 
 export default class Runner extends Component {
 
@@ -15,13 +16,12 @@ export default class Runner extends Component {
     }
     
     success = (response) => {
-        
-        fetch("http://localhost:3000/last", {
+        fetch("https://da1ca9cb.ngrok.io/last", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({...this.state.center, cookie: document.cookie})
+            body: JSON.stringify({lat: response.coords.latitude, lng: response.coords.longitude, cookie: document.cookie})
         })
         .then(response => response.json())
         .then(response => this.setState({center: {lat: response.lat, lng: response.lng}}))
@@ -39,10 +39,11 @@ export default class Runner extends Component {
 
     render(){
         return(
-            // <div>Test</div>
-            <React.Fragment>
             
-            <MapContainer center={this.state.center}/>
+            <React.Fragment>
+            <div className="message">Test.</div>
+            <Timer/>            
+            <div className="mapDiv"><MapContainer center={this.state.center}/></div>
             
             </React.Fragment>
         )
